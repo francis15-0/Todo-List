@@ -1,33 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
+import darkBackground from './assets/images/bg-desktop-dark.jpg'
+import lightBackground from './assets/images/bg-desktop-light.jpg'
+
+import ModeToggle from './components/ModeToggle'
+import TodoForm from './components/TodoForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [mode, setMode] = useState({isDark: true})
+  document.body.style.backgroundColor = mode? "hsl(235, 21%, 11%)":  "white";
+  
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <img className='background' src={mode? darkBackground: lightBackground} alt="Background image" />
+
+      
+
+      <div className='switch-flex'>
+        
+        <h1>TODO</h1>
+        <ModeToggle theme={mode} set={setMode}/>
+      
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TodoForm mode={mode}/>
+      
     </>
   )
 }
