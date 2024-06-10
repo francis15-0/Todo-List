@@ -5,9 +5,14 @@ export default function TodoForm({ mode }) {
     const handleChange = (e)=>{
         setTerm(e.target.value)
     }
+
+    const handleSubmit = (e)=>{
+      e.preventDefault()
+
+    }
   return (
     <>
-      <form action="">
+      <form onSubmit={(e)=>handleSubmit(e)} action="">
         <div className="form-design">
           <input
             className={mode ? "dark" : "light"}
@@ -21,8 +26,8 @@ export default function TodoForm({ mode }) {
             className="submit"
             style={
               mode
-                ? { backgroundColor: "hsl(235, 24%, 19%)" }
-                : { backgroundColor: "white", border: "1px solid black" }
+                ? { backgroundColor: "hsl(235, 24%, 19%)", border: "1px solid hsl(234, 39%, 85%)" }
+                : { backgroundColor: "white", border: "1px solid black"}
             }
             
           ></button>

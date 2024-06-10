@@ -5,6 +5,7 @@ import lightBackground from './assets/images/bg-desktop-light.jpg'
 
 import ModeToggle from './components/ModeToggle'
 import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
 
 function App() {
   const [mode, setMode] = useState({isDark: true})
@@ -25,6 +26,8 @@ function App() {
       
       </div>
       <TodoForm mode={mode}/>
+
+      <TodoList mode={mode}/>
       
     </>
   )

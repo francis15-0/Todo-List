@@ -69,6 +69,7 @@ input {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .submit{
@@ -79,6 +80,52 @@ input {
   left: 1em;
   background-color: hsl(235, 24%, 19%);
   outline: none;
-  border: 1px solid hsl(234, 39%, 85%);
   cursor: pointer;
+  transition: transform 1s;
+}
+
+.submit:hover{
+  transform: scale(1.2);
+  
+}
+
+
+.TodoItem{
+  width: 35rem;
+  height: 3.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: "Josefin Sans", sans-serif;
+  
+  position: relative;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  
+}
+
+.info{
+  width: inherit;
+  height: 2em;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info p{
+  font-size: 0.7rem;
+}
+
+.task-flex{
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  
+  
 }
