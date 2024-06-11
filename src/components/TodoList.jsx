@@ -4,12 +4,21 @@ import TodoItem from "./TodoItem";
 export default function TodoList({ mode }) {
   const test = mode ? "dark TodoItem" : "light TodoItem";
   const [todo, setTodo] = useState([
-    { task: "hello world", id: crypto.randomUUID(), isCompleted: false },
+    { task: "hello world", id: crypto.randomUUID(), isCompleted: false },{ task: "hello world", id: crypto.randomUUID(), isCompleted: false }
   ]);
   return (
     <>
       <div className={test}>
-        <TodoItem mode={mode} todos={todo}/>
+
+        {
+          todo.map(to=>{
+            return(
+               <TodoItem key={to.id} mode={mode} todo={to}/>
+            )
+           
+          })
+        }
+        
         
         
         
