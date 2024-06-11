@@ -152,3 +152,7 @@ input {
   border-radius: 50%;
   background-color: aqua;
 }
+
+.task{
+  padding-left: 0.6rem;
+}
