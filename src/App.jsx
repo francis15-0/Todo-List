@@ -2,6 +2,7 @@ import './App.css'
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Form from './components/Form';
+import List from './components/List';
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [theme, setTheme] = useState("light")
@@ -30,9 +31,8 @@ function App() {
 
       <img src={imageSrc} alt="background" className='image' />
       <Header theme={theme} update={setTheme}/>
-
-
       <Form />
+      <List />
      
       
       
