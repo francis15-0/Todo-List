@@ -69,6 +69,7 @@ body.dark input{
   align-items: center;
   width: 85%;
   position: relative;
+  margin-bottom: 4rem;
   
 
 }
@@ -104,7 +105,12 @@ body.dark p{
 .list{
   width: 85%;
   height: 4rem;
-  background-color: aqua;
+  background-color: white;
+  border-radius: 0.3rem;
+  outline: none;
+  display: flex;
+  align-items: center;
+
 }
 
 .circle-check{
@@ -160,7 +166,7 @@ img[alt="check"]{
   .list{
   width: 50%;
   height: 4rem;
-  background-color: aqua;
+  background-color: white;
 }
 
 }
