@@ -12,7 +12,7 @@ export default function Header({theme, update}){
         <>
             <div className="header">
                 <p>Todo</p>
-                <img src={theme == "light" ? "images/icon-moon.svg": "images/icon-sun.svg"} alt="Icon" onClick={updateTheme} />
+                <img className="icon" src={theme == "light" ? "images/icon-moon.svg": "images/icon-sun.svg"} alt="Icon" onClick={updateTheme} />
             </div>
         </>
     )
