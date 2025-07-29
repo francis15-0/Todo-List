@@ -33,7 +33,11 @@ function App() {
       <Header theme={theme} update={setTheme}/>
       <Form />
       <List />
-     
+      <List />
+      <List />
+      <List />
+      
+      
       
       
       
